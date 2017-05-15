@@ -2,17 +2,12 @@
 $searchword = $_POST['searchword'];
 var_dump($searchword);
 
-$headers = array(
-    "Accept: application/json",
-    "api-key: C4EB8CFFF35966AB916105796228E01B",
-    );
+$headers = array("Accept: application/json","api-key: C4EB8CFFF35966AB916105796228E01B");
 
 $query = array(
                 'api-version' => '2016-09-01',
                 'search' => "'".$searchword."'",
             );
-
-var_dump($query);
 
 $url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
 
@@ -22,7 +17,6 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $html =  curl_exec($ch);
-var_dump($html);
 curl_close($ch);
 ?>
 <!DOCTYPE html> 
