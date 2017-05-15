@@ -34,7 +34,7 @@ curl_close($ch);
 <h1>特集検索サンプルページ</h1>
 <form action="search.php" method="post">
 <fieldset>
-キーワード：<input type="text" name="searchword" autofocus required><br>
+キーワード：<input type="text" name="searchword" autofocus required value="<?php echo $searchword;?>"><br>
 <input type="submit" value="送信">
 </fieldset>
 </form>
