@@ -17,7 +17,11 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 暫定対応
-$html =  curl_exec($ch);
+$response =  curl_exec($ch);
+
+$result = json_decode($response, true);
+
+
 curl_close($ch);
 ?>
 <!DOCTYPE html> 
@@ -36,7 +40,7 @@ curl_close($ch);
 </fieldset>
 </form>
 <?php
-var_dump($html);
+var_dump($result);
 ?>
 </body> 
 </html>
