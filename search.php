@@ -11,7 +11,7 @@ $query = array(
             );
 $url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
 
-
+var_dump($url);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
