@@ -9,7 +9,7 @@ $headers = array(
 
 $query = array(
                 'api-version' => '2016-09-01',
-                'search' => "{$searchword}",
+                'search' => '藤原',
             );
 $url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
 
