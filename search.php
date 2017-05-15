@@ -16,7 +16,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false); // 暫定対応
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 暫定対応
 $html =  curl_exec($ch);
 curl_close($ch);
 ?>
