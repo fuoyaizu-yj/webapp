@@ -1,5 +1,24 @@
 <?php
-  var_dump($_POST);
+$headers = array(
+    "Accept: application/json",
+    "api-key: C4EB8CFFF35966AB916105796228E01B",
+    );
+
+
+$query = array(
+                'api-version' => '2016-09-01',
+                'search' => $_POST['searchword'],
+            );
+$url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
+
+
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+$html =  curl_exec($ch);
+curl_close($ch);
 ?>
 <!DOCTYPE html> 
 <html> 
@@ -16,7 +35,9 @@
 <input type="submit" value="送信">
 </fieldset>
 </form>
-
+<?php
+var_dump($html);
+?>
 </body> 
 </html>
 
