@@ -10,7 +10,7 @@
 <body>
 
 <h1>特集検索サンプルページ</h1>
-<form>
+<form action="search.php" method="post">
 <fieldset>
 キーワード：<input type="text" name="searchword" autofocus required><br>
 <input type="submit" value="送信">
