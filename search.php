@@ -9,7 +9,7 @@ $headers = array(
 
 $query = array(
                 'api-version' => '2016-09-01',
-                'search' => '{$searchword}',
+                'search' => "'".$searchword."'",
             );
 
 var_dump($query);
