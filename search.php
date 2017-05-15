@@ -1,6 +1,6 @@
 <?php
 $searchword = $_POST['searchword'];
-
+var_dump($searchword);
 
 $headers = array(
     "Accept: application/json",
