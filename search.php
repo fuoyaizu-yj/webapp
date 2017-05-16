@@ -40,12 +40,24 @@ curl_close($ch);
 <body>
 
 <h1>特集検索サンプルページ</h1>
+
+<form class="form-inline" action="search.php" method="post">
+  <div class="form-group">
+    <label for="exampleInputKeyword">キーワード</label>
+    <input type="text" class="form-control" id="exampleInputKeyword" placeholder="テレビ" value="<?php echo $searchword;?>">
+  </div>
+  <button type="submit" class="btn btn-default">送信</button>
+</form>
+
+<!--
 <form action="search.php" method="post">
 <fieldset>
 キーワード：<input type="text" name="searchword" autofocus required value="<?php echo $searchword;?>"><br>
 <input type="submit" value="送信">
 </fieldset>
 </form>
+//-->
+  
 <?php
 var_dump($result);
 ?>
