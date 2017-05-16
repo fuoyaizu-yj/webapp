@@ -1,4 +1,5 @@
 <?php
+var_dump($_POST);
 $searchword = $_POST['searchword'];
 
 $headers = array("Accept: application/json","api-key: C4EB8CFFF35966AB916105796228E01B");
