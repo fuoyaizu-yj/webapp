@@ -1,5 +1,4 @@
 <?php
-var_dump($_REQUEST);
 $searchword = $_POST['searchword'];
 
 $headers = array("Accept: application/json","api-key: C4EB8CFFF35966AB916105796228E01B");
@@ -60,7 +59,28 @@ curl_close($ch);
 //-->
   
 <?php
-var_dump($result);
+if (isset($result["value"]))
+{
+    $tmpArr = array();
+    foreach($result["value"] as $v)
+    {
+        $imageArr = json_decode($v["Image"][0], true);
+        $readArr = json_decode($v["Read"][0], true);
+
+        $tmpArr[] = <<< EOD
+<tr>
+<td><img src="{$imageArr["src"]}" alt="{$imageArr["alt"]}" class="img-thumbnail"></td>
+<td> {$readArr["text"]}<td>
+</tr>
+EOD;
+    }
+    $html = implode("¥n", $tmpArr);
+    echo <<< EOD
+<table class="table table-bordered">
+{$html}
+</table>
+EOD;
+}
 ?>
 </body> 
 </html>
