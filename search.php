@@ -5,7 +5,8 @@ $headers = array("Accept: application/json","api-key: C4EB8CFFF35966AB9161057962
 
 $query = array(
                 'api-version' => '2016-09-01',
-                'search' => "'".$searchword."'",
+                'queryType='  => 'full',
+                'search' => "'¥"".$searchword."¥"'",
             );
 
 $url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
