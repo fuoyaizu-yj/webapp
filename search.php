@@ -44,8 +44,8 @@ curl_close($ch);
 
 <form class="form-inline" action="search.php" method="post">
   <div class="form-group">
-    <label for="exampleInputKeyword">キーワード</label>
-    <input type="text" class="form-control" id="exampleInputKeyword" placeholder="テレビ" value="<?php echo $searchword;?>">
+    <label for="searchword">キーワード</label>
+    <input type="text" class="form-control" id="searchword" name="searchword" placeholder="テレビ" value="<?php echo $searchword;?>">
   </div>
   <button type="submit" class="btn btn-default">送信</button>
 </form>
