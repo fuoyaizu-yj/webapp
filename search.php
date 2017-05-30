@@ -1,7 +1,7 @@
 <?php
 $searchword = $_POST['searchword'];
 
-$headers = array("Accept: application/json","api-key: C4EB8CFFF35966AB916105796228E01B");
+$headers = array("Accept: application/json","api-key: 10EA5C144BAFA7785E49911EBF01855B");
 
 $query = array(
                 'api-version' => '2016-09-01',
@@ -9,7 +9,7 @@ $query = array(
                 'search' => '"'.$searchword.'"',
             );
 
-$url = "https://test-fuoyaizu.search.windows.net/indexes/temp/docs?".http_build_query($query);
+$url = "https://gyaosp.search.windows.net/indexes/temp/docs?".http_build_query($query);
 
 
 $ch = curl_init();
