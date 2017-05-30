@@ -75,7 +75,7 @@ if (isset($result["value"]))
 </tr>
 EOD;
     }
-    $html = implode("¥n", $tmpArr);
+    $html = implode("", $tmpArr);
     echo <<< EOD
 <table class="table table-bordered">
 {$html}
